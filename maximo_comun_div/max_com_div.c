@@ -1,7 +1,11 @@
 #include <stdio.h>
-/* Aplicación que calcula el MCD a partir del ingreso de dos números por teclad */
+/* Aplicación que calcula el MCD a partir del ingreso de dos números por teclad 
+    Se utilizaron mecanismos de bulcle condicional
+    se calcula el MCD con valores enteros
+*/
 int main() {
     int a, b, mcd;
+    
 
     printf("Ingrese dos números enteros: ");
     scanf("%d %d", &a, &b);
