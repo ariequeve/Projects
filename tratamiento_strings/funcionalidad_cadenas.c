@@ -31,8 +31,10 @@ if (longCad1>longCad2){
 
 if (strlen(primCadena)>strlen(segCadena)){
     printf("La primera palabra %s es la mas larga\n", primCadena);
-} else {
+} else if (strlen(segCadena)>strlen(primCadena)){
     printf("La primera palabra %s es la mas larga\n", segCadena);
+} else{
+    printf("las palabras son identicas");
 }
 
 //concatene ambas cadenas e indique la longitud total
