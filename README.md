@@ -70,7 +70,7 @@ Los temas cubiertos en este curso incluyen, pero no se limitan a:
 
 ## Contribuciones
 
-Este repositorio está abierto para contribuciones. Si quieres sugerir mejoras o agregar más ejemplos, sigue estos pasos:
+Este repositorio está abierto para contribuciones. Si querés sugerir mejoras o agregar más ejemplos, sigue estos pasos:
 
 1. **Realiza un fork** del repositorio.
 2. **Clona tu fork** y realiza los cambios necesarios.
@@ -78,4 +78,4 @@ Este repositorio está abierto para contribuciones. Si quieres sugerir mejoras o
 
 ## Contacto
 
-Si tienes alguna pregunta o sugerencia, no dudes en contactarme a través de mi correo: ariel.quevedo@usal.edu.ar
+Si tenés alguna pregunta o sugerencia, no dudes en contactarme a través de mi correo: ariel.quevedo@usal.edu.ar
