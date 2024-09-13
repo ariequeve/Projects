@@ -76,6 +76,14 @@ int main() {
     } else {
         printf("El Alumno es Menor de edad \n");
     }
+
+    /*3.B. Determinar si el promedio de las calificaciones es mayor o igual a 6.0 y, en ese caso, mostrar un mensaje
+            que indique si el estudiante aprobó o reprobó el curso. */
+    if (promedio > 6) {
+        printf("El Alumno APROBO el examen \n");
+    } else {
+        printf("El Alumno NO APROBO el examen \n");
+    }
     
     return 0;
 }
