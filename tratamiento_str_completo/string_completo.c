@@ -32,7 +32,7 @@ int main() {
     printf("Ingrese 3 CALIFICACIONES del Alumno: \n");
 
     // Bucle para la carga de 3 calificaciones
-    for (size_t i = 0; i < cantCalificaciones; i++)
+    for (int i = 0; i < cantCalificaciones; i++)
     {
         /* code */
         printf("Calificacion %d: \n", i + 1);
