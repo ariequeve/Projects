@@ -24,7 +24,7 @@ int main() {
     char nombreAlumno[30];
     char apellidoAlumno[30];
     char nombre_completo[60];
-    int edadAlumno;
+    int edadAlumno, i;
     const int cantCalificaciones = 3;
     int calificaciohnes[3];
 
@@ -61,8 +61,15 @@ int main() {
     printf("Hola:  %s\n", nombre_completo);
 
     // 2.A. Calcular el promedio de tres calificaciones ingresadas por el usuario y mostrarlo.
-    
+    int total_calificaciones, promedio;
+    for (i = 0; i < cantCalificaciones; i++)
+    {
+        /* code */
+        total_calificaciones += calificaciohnes[i];
+    }
+    promedio = total_calificaciones/i;
+    printf("El Promedio de Calificaciones es:  %d\n", promedio);
 
-    
+
     return 0;
 }
