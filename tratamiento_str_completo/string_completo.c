@@ -23,7 +23,7 @@ int main() {
     // Declaro variables
     char nombreAlumno[30];
     char apellidoAlumno[30];
-    char nombre_completo[60];
+    char nombre_completo[60] = "";
     int edadAlumno, i;
     const int cantCalificaciones = 3;
     int calificaciohnes[3];
