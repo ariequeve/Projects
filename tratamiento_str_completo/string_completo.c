@@ -70,11 +70,12 @@ int main() {
     promedio = total_calificaciones/i;
     printf("El Promedio de Calificaciones es:  %d\n", promedio);
 
-    // Determinar si el estudiante es mayor de edad (18 años o más) y mostrar un mensaje indicando si es adulto o no.
+    // 3.A. Determinar si el estudiante es mayor de edad (18 años o más) y mostrar un mensaje indicando si es adulto o no.
     if (edadAlumno >= 18){
         printf("El Alumno es Mayor de edad \n");
     } else {
         printf("El Alumno es Menor de edad \n");
     }
+    
     return 0;
 }
