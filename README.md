@@ -11,7 +11,7 @@ Este repositorio contiene los siguientes recursos:
 - **Proyectos**: Ejercicios integradores y proyectos más avanzados que ayudan a reforzar los conceptos aprendidos.
 - **Guías de estudio**: Pautas y consejos para abordar las prácticas.
 
-## Estructura del Repositorio
+## Estructura del Repo
 
 La estructura del repositorio está organizada de la siguiente manera:
 
