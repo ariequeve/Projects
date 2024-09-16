@@ -25,6 +25,8 @@ int main() {
     char apellidoAlumno[30];
     char nombre_completo[60] = "";
     int edadAlumno, i;
+    
+    // Utilizo un array de calificaciones y declaro la constante cantCalificaciones para calcular el promedio
     const int cantCalificaciones = 3;
     int calificaciohnes[3];
 
