@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define NUM_PILOTOS 5
+//#define NUM_PILOTOS 5
 
 // Estructura para almacenar la información de un piloto
 struct Piloto {
@@ -39,10 +39,13 @@ void ordenarPilotos(struct Piloto pilotos[], int n) {
 }
 
 int main() {
-    struct Piloto pilotos[NUM_PILOTOS];
+    const int num_pilotos = 5;
+    //struct Piloto pilotos[NUM_PILOTOS];
+    struct Piloto pilotos[num_pilotos];
 
     // Ingresar los datos de los pilotos
-    for (int i = 0; i < NUM_PILOTOS; i++) {
+    //for (int i = 0; i < NUM_PILOTOS; i++) {
+    for (int i = 0; i < num_pilotos; i++) {
         printf("Ingrese el nombre del piloto %d: ", i + 1);
         scanf("%s", pilotos[i].nombre);
 
@@ -67,11 +70,13 @@ int main() {
     }
 
     // Ordeno los pilotos por el mejor tiempo con la funcion ordenarPilotos()
-    ordenarPilotos(pilotos, NUM_PILOTOS);
+    //ordenarPilotos(pilotos, NUM_PILOTOS);
+    ordenarPilotos(pilotos, num_pilotos);
 
     // Mostrar la grilla de salida
     printf("Grilla de salida:\n");
-    for (int i = 0; i < NUM_PILOTOS; i++) {
+    //for (int i = 0; i < NUM_PILOTOS; i++) {
+    for (int i = 0; i < num_pilotos; i++) {
         printf("Posicion %d: %s %s, Escudería: %s, Circuito: %s, Mejor tiempo: %.2f segundos\n",
                i + 1, pilotos[i].nombre, pilotos[i].apellido, pilotos[i].escuderia, pilotos[i].circuito, pilotos[i].mejorTiempo);
     }
