@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-//#define NUM_PILOTOS 5
-
 // Estructura para almacenar la información de un piloto
 struct Piloto {
     char nombre[50];
@@ -65,8 +63,12 @@ void ordenarPilotos(struct Piloto pilotos[], int n) {
 void muestroGrilla(struct Piloto pilotos[], int num_pilotos) {
     printf("Grilla de salida:\n");
     for (int i = 0; i < num_pilotos; i++) {
+        /*
         printf("Posicion %d: %s %s, Escudería: %s, Circuito: %s, Mejor tiempo: %.2f segundos\n",
                i + 1, pilotos[i].nombre, pilotos[i].apellido, pilotos[i].escuderia, pilotos[i].circuito, pilotos[i].mejorTiempo);
+               */
+        printf("Posicion %d: %s %s, Escudería: %s, Mejor tiempo: %.2f segundos\n",
+               i + 1, pilotos[i].nombre, pilotos[i].apellido, pilotos[i].escuderia, pilotos[i].mejorTiempo);      
     }
 }
 
