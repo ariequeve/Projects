@@ -1,0 +1,8 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/ariel/Projects/goleadores/goleadores'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _cargarDatosPiloto, symObjAddr: 0x0, symBinAddr: 0x100003B74, symSize: 0x180 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _cargarDatosPiloto, symObjAddr: 0x0, symBinAddr: 0x100003B74, symSize: 0x180 }
+  - { offsetInCU: 0x8F, offset: 0x8F, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x180, symBinAddr: 0x100003CF4, symSize: 0x198 }
+...
