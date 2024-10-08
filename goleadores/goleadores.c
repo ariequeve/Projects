@@ -38,6 +38,23 @@ void cargarDatosPiloto(struct Jugador jugadores[], int num_jugador) {
         }
 };
 
+void ordenarGoleadores(struct Jugador jugadores[], int n){
+
+
+    struct Jugador temp;
+    for (int i = 0; i < n-1; i++) {
+        for (int j = 0; j < n-i-1; j++) {
+            if (jugadores[j].goles > jugadores[j+1].goles) {
+                temp = jugadores[j];
+                jugadores[j] = jugadores[j+1];
+                jugadores[j+1] = temp;
+            }
+        }
+    }
+}
+
+
+
 void generarTablaPosiciones (struct Jugador jugadores[], int num_jugador){
     
 
@@ -58,7 +75,8 @@ int main () {
     struct Jugador jugadores[num_jugador];
 
     cargarDatosPiloto(jugadores, num_jugador);
-    generarTablaPosiciones(jugadores,num_jugador);
+    ordenarGoleadores(jugadores, num_jugador);
+    generarTablaPosiciones(jugadores, num_jugador);
 
     return 0;
 
