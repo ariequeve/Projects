@@ -2,10 +2,10 @@
 triple:          'arm64-apple-darwin'
 binary-path:     '/Users/ariel/Projects/goleadores/goleadores'
 relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _cargarDatosJugadores, symObjAddr: 0x0, symBinAddr: 0x100003734, symSize: 0x2D4 }
-  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _cargarDatosJugadores, symObjAddr: 0x0, symBinAddr: 0x100003734, symSize: 0x2D4 }
-  - { offsetInCU: 0xE3, offset: 0xE3, size: 0x8, addend: 0x0, symName: _equipoGoleador, symObjAddr: 0x2D4, symBinAddr: 0x100003A08, symSize: 0x138 }
-  - { offsetInCU: 0x14D, offset: 0x14D, size: 0x8, addend: 0x0, symName: _ordenarGoleadores, symObjAddr: 0x40C, symBinAddr: 0x100003B40, symSize: 0x18C }
-  - { offsetInCU: 0x1C5, offset: 0x1C5, size: 0x8, addend: 0x0, symName: _generarTablaPosiciones, symObjAddr: 0x598, symBinAddr: 0x100003CCC, symSize: 0xE4 }
-  - { offsetInCU: 0x213, offset: 0x213, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x67C, symBinAddr: 0x100003DB0, symSize: 0xA4 }
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _cargarDatosJugadores, symObjAddr: 0x0, symBinAddr: 0x10000373C, symSize: 0x2D4 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _cargarDatosJugadores, symObjAddr: 0x0, symBinAddr: 0x10000373C, symSize: 0x2D4 }
+  - { offsetInCU: 0xE3, offset: 0xE3, size: 0x8, addend: 0x0, symName: _equipoGoleador, symObjAddr: 0x2D4, symBinAddr: 0x100003A10, symSize: 0x138 }
+  - { offsetInCU: 0x14D, offset: 0x14D, size: 0x8, addend: 0x0, symName: _ordenarGoleadores, symObjAddr: 0x40C, symBinAddr: 0x100003B48, symSize: 0x18C }
+  - { offsetInCU: 0x1C5, offset: 0x1C5, size: 0x8, addend: 0x0, symName: _generarTablaPosiciones, symObjAddr: 0x598, symBinAddr: 0x100003CD4, symSize: 0xE4 }
+  - { offsetInCU: 0x213, offset: 0x213, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x67C, symBinAddr: 0x100003DB8, symSize: 0xA4 }
 ...
