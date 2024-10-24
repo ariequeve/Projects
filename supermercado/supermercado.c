@@ -30,6 +30,9 @@ int main() {
     float precios[] = {100.0, 200.0, 150.0};
     int cantidades[] = {0, 0, 0};
 
+    // Descuento pago en efectivo
+    int const descuento_efectivo = 0.10;
+
     // Pedir nombre del cliente
     printf("Ingrese el nombre del cliente: ");
     //fgets(nombre, sizeof(nombre), stdin);
@@ -69,7 +72,8 @@ int main() {
 
     // Calcular descuento si aplica
     if (metodoPago == 'A' || metodoPago == 'a') {
-        descuento = total * 0.10;
+        //descuento = total * 0.10;
+        descuento = total * descuento_efectivo;
     }
     
     totalFinal = total - descuento;
