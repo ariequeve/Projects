@@ -2,7 +2,7 @@
 
 /*
 
-    Desarrolla un programa en lenguaje C que permita realizar la siguiente operación:
+    Desarrollar un programa en lenguaje C que permita realizar la siguiente operación:
     Al iniciar el programa, el sistema debe solicitar el nombre y apellido del cliente.
     A continuación, el sistema mostrará un menú con 3 productos disponibles, cada uno identificado con un número y acompañado de su precio.
     El cliente podrá seleccionar un producto ingresando el número correspondiente y luego la cantidad que desea comprar.
@@ -33,12 +33,11 @@ int main() {
     // Descuento pago en efectivo
     int const descuento_efectivo = 0.10;
 
-    // Pedir nombre del cliente
+    // Pido nombre del cliente
     printf("Ingrese el nombre del cliente: ");
-    //fgets(nombre, sizeof(nombre), stdin);
     scanf("%s", nombre);
 
-    // Mostrar menú y procesar selección
+    // Muestro menú y proceso la selección de productos
     do {
         printf("\nSeleccione un producto:\n");
         printf("1. Producto A - $100\n");
@@ -70,7 +69,7 @@ int main() {
     printf("Seleccione el método de pago (A/B): ");
     scanf(" %c", &metodoPago);
 
-    // Calcular descuento si aplica
+    // Calculo descuento si aplica
     if (metodoPago == 'A' || metodoPago == 'a') {
         //descuento = total * 0.10;
         descuento = total * descuento_efectivo;
@@ -78,7 +77,7 @@ int main() {
     
     totalFinal = total - descuento;
 
-    // Mostrar resumen de compra
+    // Muestro el resumen de compra
     printf("\n--- RESUMEN DE COMPRA ---\n");
     printf("Cliente: %s", nombre);
     printf("Productos comprados:\n");
@@ -93,6 +92,7 @@ int main() {
         printf("Producto C - Cantidad: %d - Subtotal: $%.2f\n", cantidades[2], cantidades[2] * precios[2]);
     }
 
+    // Muestro resultados de la operación
     printf("Total sin descuento: $%.2f\n", total);
     printf("Descuento: $%.2f\n", descuento);
     printf("Total a pagar: $%.2f\n", totalFinal);
