@@ -63,13 +63,15 @@ float MontoPlatosSeleccionados(struct Producto productos[], int cantidadProducto
 }
 
 // Funci'on que permite la entrada de datos del cliente
-void CargarDatosCliente(struct Cliente cliente){
-   
+struct Cliente CargarDatosCliente(){
+
+    struct Cliente cliente;
     printf("Ingrese el nombre del cliente: ");
     scanf("%s", cliente.nomCliente);
     printf("Ingrese el apellido del cliente: ");
     scanf("%s", cliente.apeCliente);
-}
+    return cliente;
+};
 
 // Funcion que calcula el total en funcion del metodo de pago (Efectivo o Tarjeta)
 int CalculaDescuentoMetodoPago(float total, struct Cliente persona_cliente){
@@ -113,15 +115,16 @@ int main(){
         {"Producto 2", 200.0, 0},
         {"Producto 3", 150.0, 0}
     };
-    float descuento, montoPlatos;;
+    float descuento, montoPlatos;
+    int cantidadProductos;
 
     /* Llamada a la funcion CargarDatosCliente() que solicita datos al usurio y los almacena en mi struct Cliente
         params: @param cliente
     */
-    CargarDatosCliente(cliente);
+    cliente = CargarDatosCliente();
 
     // Función para la generación de menu y Selección de productos
-    int cantidadProductos = sizeof(productos) / sizeof(productos[0]);
+    cantidadProductos = sizeof(productos) / sizeof(productos[0]);
     montoPlatos = MontoPlatosSeleccionados(productos, cantidadProductos); 
     
     if (!montoPlatos){

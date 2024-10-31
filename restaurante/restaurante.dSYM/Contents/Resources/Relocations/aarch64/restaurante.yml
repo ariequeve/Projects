@@ -2,10 +2,10 @@
 triple:          'arm64-apple-darwin'
 binary-path:     '/Users/ariel/Projects/restaurante/restaurante'
 relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _MontoPlatosSeleccionados, symObjAddr: 0x0, symBinAddr: 0x1000036FC, symSize: 0x1B4 }
-  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _MontoPlatosSeleccionados, symObjAddr: 0x0, symBinAddr: 0x1000036FC, symSize: 0x1B4 }
-  - { offsetInCU: 0xC9, offset: 0xC9, size: 0x8, addend: 0x0, symName: _CargarDatosCliente, symObjAddr: 0x1B4, symBinAddr: 0x1000038B0, symSize: 0x6C }
-  - { offsetInCU: 0xEE, offset: 0xEE, size: 0x8, addend: 0x0, symName: _CalculaDescuentoMetodoPago, symObjAddr: 0x220, symBinAddr: 0x10000391C, symSize: 0xB8 }
-  - { offsetInCU: 0x133, offset: 0x133, size: 0x8, addend: 0x0, symName: _MostrarResumenCompra, symObjAddr: 0x2D8, symBinAddr: 0x1000039D4, symSize: 0x158 }
-  - { offsetInCU: 0x1BA, offset: 0x1BA, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x430, symBinAddr: 0x100003B2C, symSize: 0x188 }
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _MontoPlatosSeleccionados, symObjAddr: 0x0, symBinAddr: 0x100003700, symSize: 0x1B4 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _MontoPlatosSeleccionados, symObjAddr: 0x0, symBinAddr: 0x100003700, symSize: 0x1B4 }
+  - { offsetInCU: 0xC9, offset: 0xC9, size: 0x8, addend: 0x0, symName: _CargarDatosCliente, symObjAddr: 0x1B4, symBinAddr: 0x1000038B4, symSize: 0x68 }
+  - { offsetInCU: 0xF2, offset: 0xF2, size: 0x8, addend: 0x0, symName: _CalculaDescuentoMetodoPago, symObjAddr: 0x21C, symBinAddr: 0x10000391C, symSize: 0xB8 }
+  - { offsetInCU: 0x137, offset: 0x137, size: 0x8, addend: 0x0, symName: _MostrarResumenCompra, symObjAddr: 0x2D4, symBinAddr: 0x1000039D4, symSize: 0x158 }
+  - { offsetInCU: 0x1BE, offset: 0x1BE, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x42C, symBinAddr: 0x100003B2C, symSize: 0x188 }
 ...
