@@ -1,7 +1,4 @@
-#include <stdio.h>
-
 /*
-
     Desarrollar un programa en lenguaje C que permita realizar la siguiente operación:
     Al iniciar el programa, el sistema debe solicitar el nombre y apellido del cliente.
     A continuación, el sistema mostrará un menú con 3 productos disponibles, cada uno identificado con un número y acompañado de su precio.
@@ -18,20 +15,32 @@
 
 */
 
+/*
+    FEcha:
+    Author: @author Ariel Quevedo
+    Descripción: 
+    Paramentros: 
+    Retorno
+
+
+*/
 
 #include <stdio.h>
 
 int main() {
+
+    // declaro variable nombre del cliente c[50]
+    // declaro variable nombre del cliente nombre_cliente[50]
     char nombre[50], metodoPago;
     int producto, cantidad, totalProductos = 0;
     float total = 0, descuento = 0, totalFinal = 0;
     
-    // Precios de los productos
+    // Defino las variables para Precios de los productos y cantidades
     float precios[] = {100.0, 200.0, 150.0};
     int cantidades[] = {0, 0, 0};
 
-    // Descuento pago en efectivo
-    int const descuento_efectivo = 0.10;
+    // Defino la constante para el pago en efectivo
+    float const descuento_efectivo = 0.10;
 
     // Pido nombre del cliente
     printf("Ingrese el nombre del cliente: ");
@@ -64,7 +73,7 @@ int main() {
 
     // Selección de método de pago
     printf("\nElija el método de pago:\n");
-    printf("A. Efectivo\n");
+    printf("A. Efectivo incluye 10%% de descuento\n");
     printf("B. Crédito\n");
     printf("Seleccione el método de pago (A/B): ");
     scanf(" %c", &metodoPago);
@@ -72,6 +81,7 @@ int main() {
     // Calculo descuento si aplica
     if (metodoPago == 'A' || metodoPago == 'a') {
         //descuento = total * 0.10;
+        //descuento = total * 0.10; // Debo siempre evitar el HARDCODING
         descuento = total * descuento_efectivo;
     }
     
@@ -82,6 +92,16 @@ int main() {
     printf("Cliente: %s", nombre);
     printf("Productos comprados:\n");
 
+    int tamanioArray = sizeof(cantidades) / sizeof(cantidades[0]);
+    for (int i = 0; i < tamanioArray; i++)
+    {
+        /* Itero en la lista (array) de productos */
+        if (cantidades[i] > 0){
+            printf("Producto: %d - Cantidad: %d - Subtotal: $%.2f\n", i + 1 ,cantidades[i], cantidades[i] * precios[i]);
+        }
+    }
+    
+/*
     if (cantidades[0] > 0) {
         printf("Producto A - Cantidad: %d - Subtotal: $%.2f\n", cantidades[0], cantidades[0] * precios[0]);
     }
@@ -91,7 +111,7 @@ int main() {
     if (cantidades[2] > 0) {
         printf("Producto C - Cantidad: %d - Subtotal: $%.2f\n", cantidades[2], cantidades[2] * precios[2]);
     }
-
+*/
     // Muestro resultados de la operación
     printf("Total sin descuento: $%.2f\n", total);
     printf("Descuento: $%.2f\n", descuento);
