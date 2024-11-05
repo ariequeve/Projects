@@ -36,7 +36,23 @@
         int cantidad;
     };
 
-// Funcion que escribe en terminal el menu de platos y registra la selecci'on de platos junto a los precios y totales
+
+/**
+ * The function `MontoPlatosSeleccionados` calculates the total amount for selected products based on
+ * user input.
+ * 
+ * @param productos The function `MontoPlatosSeleccionados` takes an array of `Producto` structures
+ * named `productos` and the total number of products `cantidadProductos` as input parameters. The
+ * `Producto` structure likely contains information about a product such as its name, price, and
+ * quantity.
+ * @param cantidadProductos The parameter `cantidadProductos` in the function
+ * `MontoPlatosSeleccionados` represents the total number of products available in the `productos`
+ * array. It is used to determine the range of products that can be selected by the user from the menu
+ * displayed within the function.
+ * 
+ * @return The function `MontoPlatosSeleccionados` returns the total amount (MontoTotalProductos) of
+ * the selected products based on the user's input.
+ */
 float MontoPlatosSeleccionados(struct Producto productos[], int cantidadProductos){
 
     int seleccionProducto, cantidadProducto;
@@ -106,9 +122,14 @@ void MostrarResumenCompra(struct Cliente cliente, struct Producto productos[], f
 
 }
 
+/**
+ * The main function initializes data structures, prompts the user for input, processes product
+ * selection, calculates discounts based on payment method, and displays a summary of the purchase.
+ * 
+ * @return The `main` function is returning an integer value of 0.
+ */
 int main(){
 
-    // Declaro las variables locales al main
     struct Cliente cliente = {" "," ",' '};
     struct Producto productos[] = {
         {"Producto 1", 100.0, 0},
@@ -131,7 +152,7 @@ int main(){
         printf("No se seleccionaron productos. Fin del programa.\n");
         return 0;
     }else {
-        // Calculo el descuento en funcion del metodo de pago
+        
         descuento = CalculaDescuentoMetodoPago(montoPlatos,cliente);
         MostrarResumenCompra(cliente, productos, montoPlatos,cantidadProductos, descuento);
     }
