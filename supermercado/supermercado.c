@@ -31,20 +31,20 @@ int main() {
 
     // declaro variable nombre del cliente c[50]
     // declaro variable nombre del cliente nombre_cliente[50]
-    char nombre[50], metodoPago;
+    char nombre_cliente[50], metodoPago;
     int producto, cantidad, totalProductos = 0;
     float total = 0, descuento = 0, totalFinal = 0;
     
     // Defino las variables para Precios de los productos y cantidades
-    float precios[] = {100.0, 200.0, 150.0};
-    int cantidades[] = {0, 0, 0};
+    float precios[] = {100.0, 200.0, 150.0, 350.0};
+    int cantidades[] = {0, 0, 0, 0};
 
     // Defino la constante para el pago en efectivo
     float const descuento_efectivo = 0.10;
 
     // Pido nombre del cliente
     printf("Ingrese el nombre del cliente: ");
-    scanf("%s", nombre);
+    scanf("%s", nombre_cliente);
 
     // Muestro menú y proceso la selección de productos
     do {
@@ -52,11 +52,12 @@ int main() {
         printf("1. Producto A - $100\n");
         printf("2. Producto B - $200\n");
         printf("3. Producto C - $150\n");
+        printf("4. Producto C - $350\n");
         printf("0. Salir\n");
         printf("Ingrese el número del producto: ");
         scanf("%d", &producto);
 
-        if (producto >= 1 && producto <= 3) {
+        if (producto >= 1 && producto <= 4) {
             printf("Ingrese la cantidad: ");
             scanf("%d", &cantidad);
             total += precios[producto - 1] * cantidad;
@@ -89,7 +90,7 @@ int main() {
 
     // Muestro el resumen de compra
     printf("\n--- RESUMEN DE COMPRA ---\n");
-    printf("Cliente: %s", nombre);
+    printf("Cliente: %s", nombre_cliente);
     printf("Productos comprados:\n");
 
     int tamanioArray = sizeof(cantidades) / sizeof(cantidades[0]);
