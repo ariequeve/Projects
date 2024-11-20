@@ -15,18 +15,19 @@
 // Estructura para almacenar la información de cada servicio. Variable Global
 struct Servicio {
     char nombre[30];
-    int precio;
+    float precio;
 };
 
 int main() {
 
     // Variables locales a funcion Main()
     char nombre[50], apellido[50];
-    int opcion, total = 0, cantidadServicios = 0;
+    int opcion, cantidadServicios = 0;
     char tieneSeguro;
-    const float precio_consulta = 50.000;
-    const float precio_analisis = 30.000;
-    const float precio_radiografia = 80.000;
+    float total = 0;
+    const float precio_consulta = 50000;
+    const float precio_analisis = 30000;
+    const float precio_radiografia = 80000;
 
     struct Servicio servicios[3] = {
         {"Consulta General", precio_consulta},
@@ -46,7 +47,7 @@ int main() {
     do {
         printf("\nSeleccione un servicio:\n");
         for (int i = 0; i < 3; i++) {
-            printf("%d. %s - $%d\n", i + 1, servicios[i].nombre, servicios[i].precio);
+            printf("%d. %s - $%.2f\n", i + 1, servicios[i].nombre, servicios[i].precio);
         }
         printf("0. Finalizar selección\n");
         printf("Opción: ");
@@ -75,10 +76,10 @@ int main() {
     printf("Servicios seleccionados:\n");
     for (int i = 0; i < 3; i++) {
         if (serviciosSeleccionados[i] > 0) {
-            printf("- %s: %d veces ($%d cada uno)\n", servicios[i].nombre, serviciosSeleccionados[i], servicios[i].precio);
+            printf("- %s: %d veces ($%.2f cada uno)\n", servicios[i].nombre, serviciosSeleccionados[i], servicios[i].precio);
         }
     }
-    printf("Total a pagar: $%d\n", total);
+    printf("Total a pagar: $%.2f\n", total);
     if (tieneSeguro == 'S' || tieneSeguro == 's') {
         printf("Descuento aplicado por seguro de salud: 15%%\n");
     } else {
