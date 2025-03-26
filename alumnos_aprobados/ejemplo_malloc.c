@@ -1,6 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define MAX_NOMBRE 50
+#define MAX_NO_APROBADOS 100  // Límite arbitrario para almacenar alumnos no aprobados
+
+// Estructura para almacenar datos de los alumnos desaprobados
+typedef struct {
+    char nombre[MAX_NOMBRE];
+    float nota;
+} AlumnoNoAprobado;
+
+
+
 int main() {
     int n = 5;
     int *arr = (int *) calloc(n, sizeof(int)); // Reservamos memoria inicializada en 0
