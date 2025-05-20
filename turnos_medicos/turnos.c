@@ -185,6 +185,61 @@ void buscarPaciente(Paciente* pacientes, int n, int nroAfiliado) {
 }
 
 /**
+ * This function sorts an array of patients by their affiliation number.
+ * 
+ * @param pacientes The parameter "pacientes" is a pointer to an array of Paciente structures. Each
+ * Paciente structure likely contains information about a patient, such as their name, age, medical
+ * history, etc.
+ * @param cantidad The parameter `cantidad` represents the number of elements in the array of
+ * `Paciente` objects that you want to sort. This parameter helps the function know how many elements
+ * are in the array so it can perform the sorting operation correctly.
+ */
+void ordenarPacientesPorAfiliado(Paciente* pacientes, int cantidad) {
+    for (int i = 0; i < cantidad - 1; i++) {
+        for (int j = 0; j < cantidad - i - 1; j++) {
+            if (pacientes[j].nroAfiliado > pacientes[j + 1].nroAfiliado) {
+                // Intercambiar pacientes[j] con pacientes[j+1]
+                Paciente temp = pacientes[j];
+                pacientes[j] = pacientes[j + 1];
+                pacientes[j + 1] = temp;
+            }
+        }
+    }
+}
+
+/**
+ * This function searches for a patient by their affiliation number in an array of patients.
+ * 
+ * @param pacientes The parameter "pacientes" is a pointer to an array of type "Paciente", which likely
+ * represents a list of patient records or objects.
+ * @param cantidad The parameter "cantidad" represents the total number of elements in the array of
+ * patients. This value indicates the size of the array and helps in determining the range of elements
+ * to search through when looking for a patient with a specific affiliation number.
+ * @param numeroBuscado The parameter `numeroBuscado` represents the specific number that you are
+ * searching for within the list of patients. The function `buscarPacientePorAfiliado` is designed to
+ * search for a patient by their affiliation number within an array of patients. It will return the
+ * index of the patient in
+ */
+int buscarPacientePorAfiliado(Paciente* pacientes, int cantidad, int numeroBuscado) {
+    int izquierda = 0;
+    int derecha = cantidad - 1;
+
+    while (izquierda <= derecha) {
+        int medio = (izquierda + derecha) / 2;
+
+        if (pacientes[medio].nroAfiliado == numeroBuscado) {
+            return medio;  // Devuelve el índice del paciente encontrado
+        } else if (pacientes[medio].nroAfiliado < numeroBuscado) {
+            izquierda = medio + 1;
+        } else {
+            derecha = medio - 1;
+        }
+    }
+
+    return -1;  // No se encontró
+}
+
+/**
 * Esta función se utiliza para liberar memoria asignada a un array de estructuras de Paciente.
 *
 * @param pacientes Un puntero a un array de estructuras de Paciente.
@@ -231,10 +286,12 @@ int main() {
             case 2: listarTurnos(pacientes, cantidad); break;
             case 3: mostrarEstadisticas(pacientes, cantidad); break;
             case 4: {
-                int nro;
+                int nroAfiliado;
                 printf("Ingrese número de afiliado: ");
-                scanf("%d", &nro);
-                buscarPaciente(pacientes, cantidad, nro);
+                scanf("%d", &nroAfiliado);
+                //buscarPaciente(pacientes, cantidad, nro);
+                ordenarPacientesPorAfiliado(pacientes, cantidad);
+                buscarPacientePorAfiliado(pacientes, cantidad, nroAfiliado);
                 break;
             }
             case 5: printf("Saliendo del sistema.\n"); break;
