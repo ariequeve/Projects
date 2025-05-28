@@ -1,0 +1,13 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/ariel/Projects/juntada_amigos/juntada'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003560, symSize: 0xC0 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003560, symSize: 0xC0 }
+  - { offsetInCU: 0xBC, offset: 0xBC, size: 0x8, addend: 0x0, symName: _cargarDatosJuntada, symObjAddr: 0xC0, symBinAddr: 0x100003620, symSize: 0x128 }
+  - { offsetInCU: 0x10A, offset: 0x10A, size: 0x8, addend: 0x0, symName: _cargarParticipantes, symObjAddr: 0x1E8, symBinAddr: 0x100003748, symSize: 0x338 }
+  - { offsetInCU: 0x178, offset: 0x178, size: 0x8, addend: 0x0, symName: _calcularGastos, symObjAddr: 0x520, symBinAddr: 0x100003A80, symSize: 0x80 }
+  - { offsetInCU: 0x1D4, offset: 0x1D4, size: 0x8, addend: 0x0, symName: _calcularSaldos, symObjAddr: 0x5A0, symBinAddr: 0x100003B00, symSize: 0x94 }
+  - { offsetInCU: 0x23E, offset: 0x23E, size: 0x8, addend: 0x0, symName: _mostrarCompensaciones, symObjAddr: 0x634, symBinAddr: 0x100003B94, symSize: 0x21C }
+  - { offsetInCU: 0x2C4, offset: 0x2C4, size: 0x8, addend: 0x0, symName: _liberarMemoria, symObjAddr: 0x850, symBinAddr: 0x100003DB0, symSize: 0x78 }
+...
