@@ -110,7 +110,7 @@ void generarTablaPosiciones (struct Jugador jugadores[], int num_jugador){
 
 int main () {
 
-    const int num_jugadores = 5, num_equipos = 5;
+    const int num_jugadores = 2, num_equipos = 2;
     struct Jugador jugadores[num_jugadores];
     struct Equipo equipos[num_equipos];
 

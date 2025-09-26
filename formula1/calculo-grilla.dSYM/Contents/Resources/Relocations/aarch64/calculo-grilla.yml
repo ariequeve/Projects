@@ -1,11 +1,5 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/ariel/Projects/formula1/calculo-grilla'
-relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _cargarDatosPiloto, symObjAddr: 0x0, symBinAddr: 0x1000037CC, symSize: 0x220 }
-  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _cargarDatosPiloto, symObjAddr: 0x0, symBinAddr: 0x1000037CC, symSize: 0x220 }
-  - { offsetInCU: 0xAB, offset: 0xAB, size: 0x8, addend: 0x0, symName: _calcularMejorTiempo, symObjAddr: 0x220, symBinAddr: 0x1000039EC, symSize: 0x88 }
-  - { offsetInCU: 0xFD, offset: 0xFD, size: 0x8, addend: 0x0, symName: _ordenarPilotos, symObjAddr: 0x2A8, symBinAddr: 0x100003A74, symSize: 0x194 }
-  - { offsetInCU: 0x175, offset: 0x175, size: 0x8, addend: 0x0, symName: _muestroGrilla, symObjAddr: 0x43C, symBinAddr: 0x100003C08, symSize: 0xFC }
-  - { offsetInCU: 0x1C3, offset: 0x1C3, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x538, symBinAddr: 0x100003D04, symSize: 0x104 }
+binary-path:     '/Users/arielquevedo/Documents/proyects/usal/ejercicios/Projects/formula1/calculo-grilla'
+relocations:     []
 ...
